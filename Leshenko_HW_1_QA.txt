@@ -29,7 +29,7 @@
 9) Открыть любой txt файл 
 === vim name1.txt
 
-10) написать туда что-нибудь, любой текст 
+10) добавить любой текст 
 === i === перейти в режим редактирования
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -42,11 +42,9 @@ Etiam faucibus lacus.
 === esc === выйти из режима редактирования
 === :wq === записать изменения и выйти из vim
 
-
 12) Выйти из папки на уровень выше 
 === cd ..
 
-—
 13) переместить любые 2 файла, которые вы создали, в любую другую папку
 === mv folder1/{name2.txt,name1.json} folder1/folder_1
 
@@ -56,10 +54,13 @@ Etiam faucibus lacus.
 15) Найти файл по имени
 === find . -name "name1*"
 
-16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает
-=== tail -f name1.txt | grep '.*'
+16) просмотреть содержимое в реальном времени после указанного значения
+=== tail -f name1.txt | grep faucibus
+=== tail -f name1.txt | grep --line-buffered faucibus >> test_log.txt === с записью в файл
+=== tail -f name1.txt | grep --line-buffered сюда_паттерн >> test_log.txt | tail -f test_log.txt === с записью в файл и отображением в терминале
 === отредактировать name1.txt в блокноте и сохранить 
 === посмотреть изменения в терминале
+
 
 17) вывести несколько первых строк из текстового файла
 === head -2 name1.txt
@@ -67,7 +68,7 @@ Etiam faucibus lacus.
 18) вывести несколько последних строк из текстового файла
 === tail -2 name1.txt
 
-19) просмотреть содержимое длинного файла (команда less) изучите как она работает
+19) просмотреть содержимое длинного файла
 === less name1.txt
 === q для выхода из режима просмотра
 
@@ -105,13 +106,13 @@ i
 pwd 
 mkdir folder_script
 cd folder_script
-mkdir folder{1..3}
+mkdir folder1 folder2 folder3
 cd folder3
-touch text{4..6}.txt json{3..4}.json
-mkdir script_folder{1..3}
+touch {text4.txt,text5.txt,text6.txt,json3.json,json4.json}
+mkdir script_folder1 script_folder2 script_folder3
 ls -la
-mv folder3/{text4.txt json3.json} folder3/script_folder1
-mv folder3/{text5.txt,json4.json} folder3/script_folder2
+mv text4.txt json3.json script_folder2
+mv folder3/{text4.txt,json3.json} folder3/script_folder2
 curl "http://162.55.220.72:5005/terminal-hw-request"
 curl "http://162.55.220.72:5005/get_method?name=(leshenkov)&age=(30)"
 date
