@@ -105,13 +105,13 @@ i
 pwd 
 mkdir folder_script
 cd folder_script
-mkdir folder1 folder2 folder3
+mkdir folder{1..3}
 cd folder3
-touch {text4.txt,text5.txt,text6.txt,json3.json,json4.json}
-mkdir script_folder1 script_folder2 script_folder3
+touch text{4..6}.txt json{3..4}.json
+mkdir script_folder{1..3}
 ls -la
-mv text4.txt json3.json script_folder2
-mv folder3/{text4.txt,json3.json} folder3/script_folder2
+mv folder3/{text4.txt json3.json} folder3/script_folder1
+mv folder3/{text5.txt,json4.json} folder3/script_folder2
 curl "http://162.55.220.72:5005/terminal-hw-request"
 curl "http://162.55.220.72:5005/get_method?name=(leshenkov)&age=(30)"
 date
