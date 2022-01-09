@@ -76,11 +76,10 @@ Etiam faucibus lacus.
 
 16) просмотреть содержимое в реальном времени после указанного значения
 === tail -f name1.txt | grep faucibus
-=== tail -f name1.txt | grep --line-buffered faucibus >> test_log.txt === с записью в файл
-=== tail -f name1.txt | grep --line-buffered сюда_паттерн >> test_log.txt | tail -f test_log.txt === с записью в файл и отображением в терминале
 === отредактировать name1.txt в блокноте и сохранить 
 === посмотреть изменения в терминале
-
+=== tail -f name1.txt | grep --line-buffered faucibus >> test_log.txt === с записью в файл
+=== tail -f name1.txt | grep --line-buffered сюда_паттерн >> test_log.txt | tail -f test_log.txt === с записью в файл и отображением в терминале
 
 17) вывести несколько первых строк из текстового файла
 === head -2 name1.txt
