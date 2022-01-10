@@ -26,11 +26,11 @@
 — touch {name1.txt,name2.txt,name3.txt,name1.json,name2.json}
 — touch name1.txt name2.txt name3.txt name1.json name2.json
 — touch name{1..3}.txt name{1..2}.json
+— file name2.json — узнать информацию о типе файла
 
 7) Создать 3 папки 
 — mkdir folder_1 folder_2 folder_3
 — или — mkdir folder_{1..3}
-
 
 8) Вывести содержимое директории
 — ls
